@@ -1,2 +1,263 @@
+// 进行浏览器样式统一
 @import "normalize";
+// 在normalize基础上, 进行样式重置, 添加自定义样式
 @import "base";
+
+// 使用rem 2个条件
+// 1 用rem作为单位
+// 2 根据屏幕大小动态改变HTML font-size
+
+// 规定 基准值 为设计图 大小 / 10
+@design: 750;
+// 这里 @design/10 加上单位 rem  为了下面不用加rem 
+@base: 75rem;
+
+@mColor: #FF841D;
+
+.container {
+    padding-top: 220/@base;
+    // width: 100%;
+    background-color: #f1f1f1;
+    // height: 4000px;
+    padding-bottom: 272/@base;
+}
+/* 头部 */
+.mm_header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    margin-bottom: 20/@base;
+    .mm_top {
+        height: 100/@base;
+        background-color: @mColor;
+        position: relative;
+        .logo{
+            position: absolute;
+            width: 410/@base;
+            height: 100/@base;
+            top: 0;
+            left: 0;
+            padding-left: 30/@base;
+            padding-top: 24/@base;
+        }
+        .app {
+            display: block;
+            position: absolute;
+            width: 92/@base;
+            height: 100/@base;
+            top: 0;
+            right : 0;
+            padding-right: 10/@base;
+            padding-top: 10/@base;
+        }
+    }
+
+    /* 搜索框 */
+    .mm_search {
+        height: 100/@base;
+        width: 100%;
+        background-color: #fff;
+        position: relative;
+        input[type="text"] {
+            height: 60/@base;
+            background-color: #F1F1F1;
+            color: #7e9cc9;
+            border-radius: 30/@base;
+            width: 70%;
+            padding-left: 30/@base;
+            font-size: 24/@base;
+            position: absolute;
+            top: 20/@base;
+            left: 20/@base;
+        }
+        a{
+            display: block;
+            font-size: 24/@base;
+            text-align: center;
+            width: 128/@base;
+            line-height: 60/@base;
+            background-color: @mColor;
+            position: absolute;
+            top: 20/@base;
+            right: 10/@base;
+            border-radius: 30/@base;   
+            color: #FFFAF6;
+        } 
+    }
+}
+
+
+/* 菜单 */
+.mm_menu {
+    ul {
+        margin-bottom: 10/@base;
+        padding-top: 40/@base;
+        background-color: #fff;
+        li {
+            width: 25%;
+            float: left;
+            margin-bottom: 30/@base;
+            a {
+                display: block;
+         
+                img {
+                    width: 106/@base;
+                    height: 100/@base;
+                    margin: 0 auto;
+                    margin-bottom: 10/@base;
+                }
+                p {
+                    text-align: center;
+                    font-size: 24/@base;
+                }
+            }
+        }
+    }
+    
+}
+
+/* 推荐 */
+.mm_recommend {
+    padding-left: 20/@base;
+    padding-right: 68/@base;
+    height: 68/@base;
+    line-height: 68/@base;
+    background-color: @mColor;
+    position: relative;
+    font-size: 38/@base;
+    color: #fff;
+    a {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 68/@base;
+        height: 68/@base;
+        background: url("../images/more.png") no-repeat;
+        background-clip: content-box;
+        padding: 14/@base;
+        background-origin: content-box;
+        background-size: 100%;
+    }
+}
+
+/* 广告 */
+.mm_advertisement {
+    background-color: #fff;
+    li {
+        border-bottom: 1px solid #ccc;
+        a {
+            background-color: #fff;
+            padding-left: 220/@base;
+            height: 260/@base;
+            display: block;
+            position: relative;
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 220/@base;
+                height: 260/@base;
+            }
+            .info {
+                padding-top: 30/@base;
+                padding-left: 20/@base;
+                font-size: 30/@base;
+                i {
+                    color: @mColor;
+                }
+            }
+            .time {
+                position: absolute;
+                top: 168/@base;
+                left: 240/@base;  
+                color: #ccc;
+                font-size: 20/@base;
+                i {
+                    padding-left: 190/@base;
+                    text-indent: 24/@base;
+                }
+            }
+        }  
+    }
+
+    .discount {
+        padding: 0 20/@base;
+        padding-top: 20/@base;
+        p {
+            line-height: 60/@base;
+            height: 60/@base;
+            border: 1px solid #ccc;
+            text-align: center;
+            border-radius: 10px;
+            a {
+                display: block;
+                font-size: 28/@base;
+            }
+        }
+    }
+}
+
+/* 尾部 */ 
+.mm_footer {
+    position: fixed;
+    bottom: 0;
+    left: 0; 
+    width: 100%;
+    background-color: #f1f1f1;
+    // background-color: #fff;
+    .rank {
+        height: 70/@base;
+        line-height: 70/@base;
+        background-color: @mColor;
+        padding-left: 20/@base;
+        padding-right: 68/@base;
+        position: relative;
+        color: #fff;
+        font-size: 38/@base;
+        margin-bottom: 50/@base;
+        a {
+            display: block;
+            height: 68/@base;
+            width: 68/@base;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: url(../images/more.png) no-repeat;
+            padding: 14/@base;
+            background-clip: content-box;
+            background-origin: content-box;
+            background-size: 100%;
+        }
+    }
+    p {
+        text-align: center;
+        color: #ccc;
+        font-size: 26/@base;
+        &.person {
+            line-height: 68/@base;
+            border-bottom: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+            a {
+                height: 68/@base;
+                float: left;
+                width: 30%;
+                border-right: 1px solid #ccc;
+                font-size: 28/@base;
+                &.back {
+                    padding-left: 10%;
+                    border-right: none;
+                }
+            }
+        }
+        &.upload a {
+            font-size: 28/@base;
+            color: red;
+        }
+        &.upload span {
+            font-size: 28/@base;
+            color: #000;
+        }
+    }
+}
