@@ -1,0 +1,157 @@
+@base: 75rem;
+.mm_list{
+    margin-top: -20/@base;
+    /* 面包屑 */
+    .choice {
+        border-top: 2px solid #ccc;
+        border-bottom: 2px solid #ccc;
+        padding-left: 20/@base;
+        background: #f1f1f1;
+
+        position: relative;
+        li {
+            height: 76/@base;
+            line-height: 76/@base;
+            float: left;
+            padding-right: 5/@base;
+            font-size: 30/@base;
+            a{
+                display: block;
+            }
+        }
+        button {
+            position: absolute;
+            right: 16/@base;
+            top: 10/@base;
+            width: 120/@base;
+            height: 56/@base;
+            border-radius: 10/@base;
+            border: none;
+            letter-spacing: 20/@base;
+            padding-left: 20/@base;
+
+            font-size: 30/@base;
+        }
+    }
+
+    /* 物品 */ 
+    .goods {
+        background-color: #fff;
+        li {
+            a {
+                display: block;
+    
+                height: 238/@base;
+                padding-left: 236/@base;
+                padding-top: 30/@base;
+                padding-bottom: 30/@base;
+                border-bottom: 2px solid #ccc;
+        
+                position: relative;
+            }
+            p {
+                padding-left: 6/@base;
+                font-size: 34/@base;
+                .price {
+                    font-size: 30/@base;
+                    color: red;
+                    padding-left:10/@base;
+                }
+                &.comment span{
+                    font-size: 24/@base;
+                    color: #b2a6a5;
+                    padding-right: 30/@base;
+                }
+            }
+            img {
+                position: absolute;
+                width: 236/@base;
+                height: 176/@base;
+            
+                top: 30/@base;
+                left: 0;
+                // background-color: lime;
+    
+                padding: 20/@base;
+            }
+        }
+    } 
+
+    /* 分页导航 */ 
+    .pagination {
+        padding: 0 46/@base;
+        padding-top: 20/@base;
+        padding-bottom: 6/@base;
+
+        position: relative;
+        margin-bottom: 30/@base;
+        background-color: #fff;
+        ul.clearfix {
+            
+            li {
+                float: left;
+                width: 156/@base;
+                height: 72/@base;
+                line-height: 72/@base;
+                text-align: center;
+                border-radius: 10/@base;
+                background-color: #f1f1f1;
+
+                &:nth-child(2) {
+                    margin: 0 90/@base;
+                    border: 1px solid #ccc;
+                    background-color: #fff;
+                    border-radius: 0;
+
+                    padding-right: 40/@base;
+                    position: relative;
+                    a {
+                        display: block;
+                    }
+                    i {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 40/@base;
+                        height: 70/@base;
+                        border-left: 1px solid #ccc;
+                        background-color: #f1f1f1;
+                        font-size: 40/@base;
+                        vertical-align: top;
+                    }
+                }
+            }
+        }
+
+        // 下拉
+        .number {
+            display: none;
+
+            position: absolute;
+            top: 100%;
+            left: 292/@base;
+            border: 1px solid #ccc;
+            transform: translateY(-6/@base);
+            border-bottom: none;
+            border-top: none;
+            li {
+                background-color: #fff;;
+                border-bottom: 1px solid #ccc;
+                width: 114/@base;
+                height: 50/@base;
+                line-height: 40/@base;
+                text-align: center;
+            }
+        }
+
+        //  切换的类 pagination.current
+        &.current .number{
+            display: block;
+        }
+    }
+}
+
+
+
+
+
