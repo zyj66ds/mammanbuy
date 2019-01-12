@@ -1,0 +1,69 @@
+//关于表格 边框的两个属性 border-collapse 边框合并 设为 collapse
+//border-space 是边框间距 
+// 在表格中设置 属性 cellspacing = 0 也行
+// caption 表格标题 在表格内 在表格外 渲染 默认乜有边框
+@base: 75rem;
+.mm_categories {
+    border-radius: 20/@base 20/@base 0 0;
+    border: 2px solid #ccc;   
+}
+table {
+    width: 100%;
+    // overflow: hidden;
+    background-color: #fff;
+    font-size: 34/@base;
+    // 边框 !!!
+    &:nth-child(1) caption{
+        border-radius: 20/@base 20/@base 0 0;
+    }
+    &:last-child caption {
+        border-bottom: none;
+    }
+    &:nth-last-child(1) tr:nth-last-child(1) td {
+        border-bottom: none;
+    }
+    caption {
+        font-weight: bold;
+        padding-left: 32/@base;
+        background-color: #f1f1f1;
+        height: 80/@base;
+        line-height: 80/@base;
+        border-bottom: 1px solid #ccc;
+        
+        a {
+            width: 80/@base;
+            &.iconfont {
+                font-size: 30/@base;
+            }
+        }
+        span {
+            width: 140/@base;
+             text-align-last:justify;
+        }
+    }
+    td{
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        height: 80/@base;
+        color: #677888;
+        font-weight: normal;
+        text-align: center;
+        &:nth-child(3n) {
+            border-right: none;
+        }
+    }
+}
+tbody {
+    display: none;
+}
+
+table.current tbody {
+    display: table-row-group;   
+}
+table.current caption {
+    border-bottom: 1px solid #ccc;
+    
+}
+
+        
+  

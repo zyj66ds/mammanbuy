@@ -1,0 +1,133 @@
+// 进行浏览器样式统一
+@import "normalize";
+// 在normalize基础上, 进行样式重置, 添加自定义样式
+@import "base";
+
+// 使用rem 2个条件
+// 1 用rem作为单位
+// 2 根据屏幕大小动态改变HTML font-size
+
+// 规定 基准值 为设计图 大小 / 10
+@design: 750;
+// 这里 @design/10 加上单位 rem  为了下面不用加rem 
+@base: 75rem;
+
+@mColor: #FF841D;
+
+html, 
+body {
+    width: 100%;
+    height: 100%;
+}
+.container {
+    padding-top: 220/@base;
+    padding-bottom: 272/@base;
+
+    background-color: pink;
+    width: 100%;
+    margin: 0 auto;
+    height: 1000px;
+}
+/* 头部 */
+.mm_header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    margin-bottom: 20/@base;
+    .mm_top {
+        height: 100/@base;
+        background-color: @mColor;
+        position: relative;
+        .logo{
+            position: absolute;
+            width: 410/@base;
+            height: 100/@base;
+            top: 0;
+            left: 0;
+            padding-left: 30/@base;
+            padding-top: 24/@base;
+        }
+        .app {
+            display: block;
+            position: absolute;
+            width: 92/@base;
+            height: 100/@base;
+            top: 0;
+            right : 0;
+            padding-right: 10/@base;
+            padding-top: 10/@base;
+        }
+    }
+
+    /* 搜索框 */
+    .mm_search {
+        height: 100/@base;
+        width: 100%;
+        background-color: #fff;
+        position: relative;
+        input[type="text"] {
+            height: 60/@base;
+            background-color: #F1F1F1;
+            color: #7e9cc9;
+            border-radius: 30/@base;
+            width: 70%;
+            padding-left: 30/@base;
+            font-size: 24/@base;
+            position: absolute;
+            top: 20/@base;
+            left: 20/@base;
+        }
+        a{
+            display: block;
+            font-size: 24/@base;
+            text-align: center;
+            width: 128/@base;
+            line-height: 60/@base;
+            background-color: @mColor;
+            position: absolute;
+            top: 20/@base;
+            right: 10/@base;
+            border-radius: 30/@base;   
+            color: #FFFAF6;
+        } 
+    }
+}
+
+/* 尾部 */ 
+.mm_footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    // background-color: #fff;
+    p {
+        text-align: center;
+        color: #ccc;
+        font-size: 26/@base;
+        &.person {
+            line-height: 68/@base;
+            border-bottom: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+            a {
+                height: 68/@base;
+                float: left;
+                width: 30%;
+                border-right: 1px solid #ccc;
+                font-size: 28/@base;
+                &.back {
+                    padding-left: 10%;
+                    border-right: none;
+                }
+            }
+        }
+        &.upload a {
+            font-size: 28/@base;
+            color: red;
+        }
+        &.upload span {
+            font-size: 28/@base;
+            color: #000;
+        }
+    }
+}

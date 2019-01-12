@@ -1,0 +1,56 @@
+.mm_categories {
+  border-radius: 0.26666667rem 0.26666667rem 0 0;
+  border: 2px solid #ccc;
+}
+table {
+  width: 100%;
+  background-color: #fff;
+  font-size: 0.45333333rem;
+}
+table:nth-child(1) caption {
+  border-radius: 0.26666667rem 0.26666667rem 0 0;
+}
+table:last-child caption {
+  border-bottom: none;
+}
+table:nth-last-child(1) tr:nth-last-child(1) td {
+  border-bottom: none;
+}
+table caption {
+  font-weight: bold;
+  padding-left: 0.42666667rem;
+  background-color: #f1f1f1;
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+  border-bottom: 1px solid #ccc;
+}
+table caption a {
+  width: 1.06666667rem;
+}
+table caption a.iconfont {
+  font-size: 0.4rem;
+}
+table caption span {
+  width: 1.86666667rem;
+  text-align-last: justify;
+}
+table td {
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  height: 1.06666667rem;
+  color: #677888;
+  font-weight: normal;
+  text-align: center;
+}
+table td:nth-child(3n) {
+  border-right: none;
+}
+tbody {
+  display: none;
+}
+table.current tbody {
+  display: table-row-group;
+}
+table.current caption {
+  border-bottom: 1px solid #ccc;
+}
