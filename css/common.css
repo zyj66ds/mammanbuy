@@ -244,13 +244,11 @@ i {
   position: relative;
 }
 .mm_header .mm_top .logo {
-  position: absolute;
-  width: 5.46666667rem;
-  height: 1.33333333rem;
-  top: 0;
-  left: 0;
   padding-left: 0.4rem;
   padding-top: 0.32rem;
+}
+.mm_header .mm_top .logo img {
+  width: 4.93333333rem;
 }
 .mm_header .mm_top .app {
   display: block;
@@ -259,8 +257,10 @@ i {
   height: 1.33333333rem;
   top: 0;
   right: 0;
-  padding-right: 0.13333333rem;
-  padding-top: 0.13333333rem;
+  padding-top: 0.21333333rem;
+}
+.mm_header .mm_top .app img {
+  width: 0.90666667rem;
 }
 .mm_header .mm_search {
   height: 1.33333333rem;

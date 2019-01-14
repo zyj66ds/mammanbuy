@@ -1,0 +1,186 @@
+// 基准值
+@base: 75rem;
+/* 详情及评价 */
+.mm_information {
+    .upper {
+        margin-top: -20/@base;
+        border-bottom: 4px solid #666;
+        /* 面包屑 */
+        .choice {
+            border-top: 2px solid #ccc;
+            border-bottom: 2px solid #ccc;
+            padding-left: 20/@base;
+            background: #f1f1f1;
+
+            position: relative;
+            li {
+                height: 76/@base;
+                line-height: 76/@base;
+                float: left;
+                padding-right: 5/@base;
+                font-size: 30/@base;
+                a{
+                    display: block;
+                }
+            }
+            button {
+                position: absolute;
+                right: 16/@base;
+                top: 10/@base;
+                width: 120/@base;
+                height: 56/@base;
+                border-radius: 10/@base;
+                border: none;
+                letter-spacing: 20/@base;
+                padding-left: 20/@base;
+
+                font-size: 30/@base;
+            }
+        }
+        /* 商品详情 */
+        .detailed {
+            padding: 30/@base 0;
+            background-color: #fff;
+        
+            text-align: center;
+            font-size: 36/@base;
+            color: #000;
+            .explain {
+                padding: 0 40/@base;
+            }
+            .image {
+                // 图片水平垂直居中
+                height: 346/@base;
+                padding-top: 80/@base;
+                img {
+                    width: 190/@base;
+                    height: 190/@base;
+                    margin: 0 auto;
+                }
+            }
+            .voice {
+                text-align: left;
+                border: 2px solid #bb3100;
+                border-left: none;
+                border-right: none;
+                background-color: #ffcf20;
+                li {
+                    float: left;
+                    height: 66/@base;
+                    line-height: 66/@base;
+                    width: 33.33%;
+                    text-align: center;
+                
+                    &:first-child {
+                        background-image: linear-gradient(to bottom, #fff 0%,  #ff9711 10% ,  #ff9711 90%, #fff 100%);
+                    }
+                    
+                    &:nth-child(2) {
+                        border-left: 2px solid #bb3100;
+                        border-right: 2px solid #bb3100;
+                    }
+                    a {
+                        font-size: 30/@base;
+                        color: #fff;
+                        display: block;
+                    }
+                    
+                }
+            }
+
+            .shop {
+                height: 90/@base;
+                line-height: 90/@base;
+                border-bottom: 2px solid #ccc;
+                padding-left: 60/@base;
+                padding-right: 20/@base;
+                text-align: left;
+                font-size: 30/@base;
+                position: relative;
+                a {
+                    float: right;
+                    span {
+                        padding: 4/@base 16/@base;
+                        
+                        background-color: pink;
+                        border-radius: 10/@base;
+                        margin-left: 30/@base;
+                    }
+                    i {
+                        color: red;
+                    }
+                }
+                .logo {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 60/@base;
+                    height: 90/@base;
+                    background: url(../images/slogo.png) no-repeat;
+                    padding: 29/@base 14/@base;
+                    background-clip: content-box;
+                    background-origin: content-box;
+                    background-size: 32/@base;
+                } 
+            }
+
+            .show {
+                padding: 20/@base 10/@base 0 10/@base;
+                font-size: 24/@base;
+                text-align: left;
+                color: #ccc;
+            }
+
+
+        }
+    }
+    .box {
+        border-top: 2px solid #fff;
+        height: 2px;
+    }
+    .lower {
+        
+        .online {
+            background-color: #ccc;
+            height: 60/@base;
+            line-height: 60/@base;
+            text-align: center;
+            font-size: 30/@base;
+        }
+        .evaluate {
+            li {
+                padding: 0 20/@base;
+                padding-top: 24/@base;
+                padding-bottom: 10/@base;
+                border-bottom: 2px solid #ccc;
+                font-size: 26/@base;
+                .info {
+                    color: #ccc;
+                    .date{
+                        float: right;
+                    }
+                }
+                .location {
+                    text-align: right;
+                    color: #ccc;
+                    margin-bottom: 10/@base;
+                }
+            }
+        }
+        .more {
+            text-align: center;
+            padding: 42/@base 20/@base;
+            p {
+                height: 60/@base;
+                line-height: 60/@base;
+                border: 2px solid #ccc;
+                border-radius: 10/@base;
+                background-image: linear-gradient(to bottom, #f1f1f1 0%,#ccc 50%, #f1f1f1 );
+                a {
+                    display: block;
+                    font-size: 24/@base;
+                }
+            }
+        }
+    }
+}
