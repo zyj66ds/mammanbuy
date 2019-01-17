@@ -1,4 +1,7 @@
 /* 菜单 */
+.mm_menu {
+  /* current类显示隐藏第三行 */
+}
 .mm_menu ul {
   margin-bottom: 0.13333333rem;
   padding-top: 0.53333333rem;
@@ -21,6 +24,9 @@
 .mm_menu ul li a p {
   text-align: center;
   font-size: 0.32rem;
+}
+.mm_menu ul.current li:nth-last-child(-n+4) {
+  display: none;
 }
 /* 推荐 */
 .mm_recommend {
@@ -56,6 +62,7 @@
 .mm_advertisement li a {
   background-color: #fff;
   padding-left: 2.93333333rem;
+  padding-right: 0.13333333rem;
   height: 3.46666667rem;
   display: block;
   position: relative;
@@ -81,10 +88,13 @@
   left: 3.2rem;
   color: #ccc;
   font-size: 0.26666667rem;
+  width: 6.53333333rem;
 }
 .mm_advertisement li a .time i {
-  padding-left: 2.53333333rem;
   text-indent: 0.32rem;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .mm_advertisement .discount {
   padding: 0 0.26666667rem;

@@ -1,6 +1,9 @@
 .mm_categories {
   border-radius: 0.26666667rem 0.26666667rem 0 0;
   border: 2px solid #ccc;
+  margin-top: -0.26666667rem;
+  background-color: #fff;
+  margin-bottom: 0.8rem;
 }
 table {
   width: 100%;
@@ -34,16 +37,22 @@ table caption span {
   width: 1.86666667rem;
   text-align-last: justify;
 }
-table td {
+table li {
+  width: 33.33%;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   height: 1.06666667rem;
+  line-height: 1.06666667rem;
   color: #677888;
   font-weight: normal;
   text-align: center;
+  float: left;
 }
-table td:nth-child(3n) {
+table li:nth-child(3n) {
   border-right: none;
+}
+table li a {
+  display: block;
 }
 tbody {
   display: none;

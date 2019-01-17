@@ -36,77 +36,9 @@
         </div>
 
         <!-- 分类 -->
-       <div class="mm_categories">
-        <table>
-            <caption>
-                <span class="fl">大家电</span>
-                <a class="fr iconfont icon-jiantou9"></a>
-            </caption>
-            <tbody>
-                <tr>
-                    <td>电视</td>
-                    <td>空调</td>
-                    <td>冰箱</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>4</td>
-                   
-                </tr>
-            </tbody>
-        </table>
-        <table>
-            <caption>
-                <span class="fl">大家电好</span>
-                <a class="fr iconfont icon-jiantou9"></a>
-            </caption>
-            <tbody>
-                <tr>
-                    <td>电视</td>
-                    <td>空调</td>
-                    <td>冰箱</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>4</td>
-                   
-                </tr>
-            </tbody>
-        </table>
-        <table class="current">
-            <caption>
-                <span class="fl">大家电</span>
-                <a class="fr iconfont icon-jiantou9"></a>
-            </caption>
-            <tbody>
-                <tr>
-                    <td>电视</td>
-                    <td>空调</td>
-                    <td>冰箱</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>4</td>
-                   
-                </tr>
-            </tbody>
-        </table>
-        
+        <div class="mm_categories">
+            <!-- 挖个坑 -->   
+                      
        </div>
 
         <!-- 底部 -->
@@ -120,6 +52,39 @@
             <p>m.manmanbuy.com</p>
         </div>
     </div>
+
+    <!-- 模板头 -->
+    <script type="text/html" id="category">
+        {{ each result v i }}
+            <table>
+                <caption data-id="{{v.titleId}}">
+                    <span class="fl">{{v.title}}</span>
+                    <a class="fr iconfont icon-jiantou9"></a>                   
+                </caption>
+                <tbody>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        {{ /each }}
+    </script>
+
+    <script type="text/html" id="list">
+        <ul class= "clearfix">
+            {{ each result v i }}
+                <li>
+                    <a href="productlist.html?productId={{v.categoryId}}">{{v.category}}</a>
+                </li>
+            {{ /each }}
+        </ul>
+
+    </script>
+
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 模板引擎 --> 
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/comparative.js"></script>
 </body>
 
 </html>

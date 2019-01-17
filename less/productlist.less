@@ -1,38 +1,41 @@
 @base: 75rem;
-.mm_list{
+/* 面包屑 */
+.choice {
     margin-top: -20/@base;
-    /* 面包屑 */
-    .choice {
-        border-top: 2px solid #ccc;
-        border-bottom: 2px solid #ccc;
-        padding-left: 20/@base;
-        background: #f1f1f1;
 
-        position: relative;
-        li {
-            height: 76/@base;
-            line-height: 76/@base;
-            float: left;
-            padding-right: 5/@base;
-            font-size: 30/@base;
-            a{
-                display: block;
-            }
-        }
-        button {
-            position: absolute;
-            right: 16/@base;
-            top: 10/@base;
-            width: 120/@base;
-            height: 56/@base;
-            border-radius: 10/@base;
-            border: none;
-            letter-spacing: 20/@base;
-            padding-left: 20/@base;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    padding-left: 20/@base;
+    background: #f1f1f1;
 
-            font-size: 30/@base;
+    position: relative;
+    li {
+        height: 76/@base;
+        line-height: 76/@base;
+        float: left;
+        padding-right: 5/@base;
+        font-size: 30/@base;
+        a{
+            display: block;
         }
     }
+    button {
+        position: absolute;
+        right: 16/@base;
+        top: 10/@base;
+        width: 120/@base;
+        height: 56/@base;
+        border-radius: 10/@base;
+        border: none;
+        letter-spacing: 20/@base;
+        padding-left: 20/@base;
+
+        font-size: 30/@base;
+    }
+}
+.mm_list{
+    background-color: #f1f1f1;
+    padding-bottom: 30/@base;
 
     /* 物品 */ 
     .goods {
@@ -84,7 +87,6 @@
         padding-bottom: 6/@base;
 
         position: relative;
-        margin-bottom: 30/@base;
         background-color: #fff;
         ul.clearfix {
             

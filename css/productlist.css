@@ -1,27 +1,23 @@
-.mm_list {
+/* 面包屑 */
+.choice {
   margin-top: -0.26666667rem;
-  /* 面包屑 */
-  /* 物品 */
-  /* 分页导航 */
-}
-.mm_list .choice {
   border-top: 2px solid #ccc;
   border-bottom: 2px solid #ccc;
   padding-left: 0.26666667rem;
   background: #f1f1f1;
   position: relative;
 }
-.mm_list .choice li {
+.choice li {
   height: 1.01333333rem;
   line-height: 1.01333333rem;
   float: left;
   padding-right: 0.06666667rem;
   font-size: 0.4rem;
 }
-.mm_list .choice li a {
+.choice li a {
   display: block;
 }
-.mm_list .choice button {
+.choice button {
   position: absolute;
   right: 0.21333333rem;
   top: 0.13333333rem;
@@ -32,6 +28,12 @@
   letter-spacing: 0.26666667rem;
   padding-left: 0.26666667rem;
   font-size: 0.4rem;
+}
+.mm_list {
+  background-color: #f1f1f1;
+  padding-bottom: 0.4rem;
+  /* 物品 */
+  /* 分页导航 */
 }
 .mm_list .goods {
   background-color: #fff;
@@ -72,7 +74,6 @@
   padding-top: 0.26666667rem;
   padding-bottom: 0.08rem;
   position: relative;
-  margin-bottom: 0.4rem;
   background-color: #fff;
 }
 .mm_list .pagination ul.clearfix li {

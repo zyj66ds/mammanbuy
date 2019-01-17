@@ -30,6 +30,11 @@
             }
         }
     }
+    /* current类显示隐藏第三行 */
+
+    ul.current li:nth-last-child(-n+4){
+        display: none;
+    }
     
 }
 
@@ -66,6 +71,7 @@
         a {
             background-color: #fff;
             padding-left: 220/@base;
+            padding-right: 10/@base;
             height: 260/@base;
             display: block;
             position: relative;
@@ -90,9 +96,13 @@
                 left: 240/@base;  
                 color: #ccc;
                 font-size: 20/@base;
+                width: 490/@base;
                 i {
-                    padding-left: 190/@base;
                     text-indent: 24/@base;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                   
                 }
             }
         }  
@@ -139,3 +149,4 @@
         }
     }
 }
+
